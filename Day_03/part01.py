@@ -8,6 +8,7 @@ count_trees = 0
 len_row = len(input[0])
 
 while y < len(input):
+
     if input[y][x % len_row] == '#':
         count_trees += 1
 
