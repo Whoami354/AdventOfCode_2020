@@ -16,6 +16,7 @@ for coor in going_different_way:
     while y < len(input):
         if input[y][x % len_row] == '#':
             count_trees += 1
+
         x += coor[0]
         y += coor[1]
 
