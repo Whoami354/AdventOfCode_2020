@@ -18,6 +18,7 @@ for coor in going_different_way:
             count_trees += 1
         x += coor[0]
         y += coor[1]
+
     product_trees *= count_trees
 
 
