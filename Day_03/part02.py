@@ -23,6 +23,4 @@ for coor in going_different_way:
 
     product_trees *= count_trees
 
-
-
 print(product_trees)
