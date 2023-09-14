@@ -15,11 +15,10 @@ for coor in going_different_way:
 
     while y < len(input):
 
-        if input[y][x] == '#':
+        if input[y][x % len_row] == '#':
             count_trees += 1
 
         x += coor[0]
-        x %= len_row
         y += coor[1]
 
     product_trees *= count_trees
