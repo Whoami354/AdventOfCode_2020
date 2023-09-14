@@ -9,10 +9,11 @@ len_row = len(input[0])
 
 while y < len(input):
 
-    if input[y][x % len_row] == '#':
+    if input[y][x] == '#':
         count_trees += 1
 
     y += 1
     x += 3
+    x %= len_row
 
 print(count_trees)
