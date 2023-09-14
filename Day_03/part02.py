@@ -3,8 +3,8 @@ with open("input", "r") as file:
     # Zum Beispiel: Daten lesen, schreiben oder verarbeiten
     input = file.read().split("\n")
 
-going_different_way = [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)]
-product_trees = 1
+going_different_way = [(1, 1), (5, 1), (7, 1), (1, 2)]
+product_trees = 282
 count_trees = 0
 
 len_row = len(input[0])
