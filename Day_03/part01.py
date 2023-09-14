@@ -12,7 +12,7 @@ while y < len(input):
     if input[y][x % len_row] == '#':
         count_trees += 1
 
-    y += 1
     x += 3
+    y += 1
 
 print(count_trees)
