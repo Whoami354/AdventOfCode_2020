@@ -18,15 +18,15 @@ def check_actual_field(field):
     if required_field == "eyr":
         return 2020 <= field_value <= 2030
     if required_field == "hgt":
-        if not field_value.endswith("cm") and not field_value.endswith("in"):
-            return False
-        else:
+        if field_value.endswith("cm") or field_value.endswith("in"):
             height = field_value[-2:]
             val = int(field_value[:-2])
             if height == "cm":
                 return 150 <= val <= 193
             else:
                 return 59 <= val <= 76
+        else:
+            return False
     if required_field == "hcl":
         return len(field_value) == 7
     if required_field == "ecl":
