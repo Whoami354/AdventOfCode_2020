@@ -3,7 +3,6 @@ with open("input", "r") as file:
     # Zum Beispiel: Daten lesen, schreiben oder verarbeiten
     input = file.read().split("\n")
 
-
 def check_validate(passport):
     passport_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
     for field in passport_fields:

@@ -61,7 +61,6 @@ def check_validate(passport):
 
     return True
 
-
 for_passport = ""
 count_valid_passport = 0
 
