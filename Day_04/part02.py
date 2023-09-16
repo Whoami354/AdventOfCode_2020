@@ -19,7 +19,7 @@ def check_actual_field(field):
     if field_first == "eyr":
         return 2020 <= field_second <= 2030
     if field_first == "hgt":
-        if (not field_second.endswith("cm") and not field_second.endswith("in")):
+        if not field_second.endswith("cm") and not field_second.endswith("in"):
             return False
         else:
             height = field_second[-2:]
