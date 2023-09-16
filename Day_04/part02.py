@@ -29,8 +29,7 @@ def check_actual_field(field):
             else:
                 return 59 <= val <= 76
     if field_first == "hcl":
-        if len(field_second) < 7:
-            return False
+        return len(field_second) == 7
     if field_first == "ecl":
         if len(field_second) > 3:
             return False
