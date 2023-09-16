@@ -10,7 +10,7 @@ def valid_pwd(letters, min, max, main_letter):
     for letter in letters:
         if letter == main_letter:
             count += 1
-    return count >= min and count <= max
+    return min <= count <= max
 
 for password in input:
     password = password.split()
