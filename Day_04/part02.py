@@ -6,7 +6,6 @@ with open("input", "r") as file:
 def check_actual_field(field):
     required_field = field.split(":")[0]
     field_value = field.split(":")[1]
-
     eye_colors = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
 
     if field_value.isdigit() and required_field != "pid" and required_field != "hgt":
