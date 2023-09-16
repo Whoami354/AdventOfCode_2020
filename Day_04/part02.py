@@ -4,39 +4,39 @@ with open("input", "r") as file:
     input = file.read().split("\n")
 
 def check_actual_field(field):
-    field_first = field.split(":")[0]
-    field_second = field.split(":")[1]
+    field_form = field.split(":")[0]
+    field_value = field.split(":")[1]
 
     eye_colors = ["amb", "blu", "brn", "gry", "grn", "hzl", "oth"]
 
-    if field_second.isdigit() and field_first != "pid" and field_first != "hgt":
-        field_second = int(field_second)
+    if field_value.isdigit() and field_form != "pid" and field_form != "hgt":
+        field_value = int(field_value)
 
-    if field_first == "byr":
-        return 1920 <= field_second <= 2002
-    if field_first == "iyr":
-        return 2010 <= field_second <= 2020
-    if field_first == "eyr":
-        return 2020 <= field_second <= 2030
-    if field_first == "hgt":
-        if not field_second.endswith("cm") and not field_second.endswith("in"):
+    if field_form == "byr":
+        return 1920 <= field_value <= 2002
+    if field_form == "iyr":
+        return 2010 <= field_value <= 2020
+    if field_form == "eyr":
+        return 2020 <= field_value <= 2030
+    if field_form == "hgt":
+        if not field_value.endswith("cm") and not field_value.endswith("in"):
             return False
         else:
-            height = field_second[-2:]
-            val = int(field_second[:-2])
+            height = field_value[-2:]
+            val = int(field_value[:-2])
             if height == "cm":
                 return 150 <= val <= 193
             else:
                 return 59 <= val <= 76
-    if field_first == "hcl":
-        return len(field_second) == 7
-    if field_first == "ecl":
-        if len(field_second) > 3:
+    if field_form == "hcl":
+        return len(field_value) == 7
+    if field_form == "ecl":
+        if len(field_value) > 3:
             return False
         else:
-            return field_second in eye_colors
-    if field_first == "pid":
-        return len(field_second) == 9
+            return field_value in eye_colors
+    if field_form == "pid":
+        return len(field_value) == 9
 
     return True
 
