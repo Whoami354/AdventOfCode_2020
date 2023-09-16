@@ -49,7 +49,6 @@ def check_validate(passport):
         if not field in allFields:
             return False
 
-
     k = 0
     while k < len(passport):
         if not check_actual_field(passport[k]):
