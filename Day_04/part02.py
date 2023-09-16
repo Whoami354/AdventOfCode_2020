@@ -37,8 +37,7 @@ def check_actual_field(field):
         else:
             return field_second in eye_colors
     if field_first == "pid":
-        if len(field_second) != 9:
-            return False
+        return len(field_second) == 9
 
     return True
 
