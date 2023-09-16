@@ -43,7 +43,6 @@ def check_validate(passport):
     passport_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
 
     allFields = ' '.join(passport)
-
     passport.pop()
 
     for field in passport_fields:
