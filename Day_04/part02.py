@@ -39,6 +39,7 @@ def check_actual_field(field):
     if field_first == "pid":
         if len(field_second) != 9:
             return False
+
     return True
 
 def check_validate(passport):
