@@ -5,6 +5,7 @@ with open("input", "r") as file:
 
 def check_validate(passport):
     passport_fields = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"]
+
     for field in passport_fields:
         if not field in passport:
             return False
