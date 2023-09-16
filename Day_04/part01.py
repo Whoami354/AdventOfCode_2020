@@ -19,7 +19,7 @@ for values in input:
     if len(values) <= 1:
         if check_validate(for_passport):
             count_valid_passport += 1
-            for_passport = ""
+        for_passport = ""
     else:
         for_passport += values
 
