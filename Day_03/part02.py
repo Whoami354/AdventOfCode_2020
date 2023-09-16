@@ -14,7 +14,6 @@ for coordinates in different_ways:
     count_trees = 0
 
     while y < len(input):
-
         if input[y][x % len_row] == '#':
             count_trees += 1
 
