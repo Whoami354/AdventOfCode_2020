@@ -31,5 +31,14 @@ for ticket in input:
     seat_ID.append(min_row * 8 + max_seat)
 
 seat_ID = sorted(seat_ID)
-my_seat = set(range(seat_ID[0], seat_ID[-1])) - set(seat_ID)
-print(list(my_seat)[0])
+
+start = seat_ID[0]
+end = seat_ID[-1]
+missing_seats = []
+
+for seat in range(start, end):
+    if not seat in seat_ID:
+        missing_seats.append(seat)
+
+my_seat = missing_seats[0]
+print(my_seat)
