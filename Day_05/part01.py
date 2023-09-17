@@ -30,4 +30,5 @@ for ticket in input:
     max_seat = max(seat_distance)
     seat_ID.append(min_row * 8 + max_seat)
 
-print(max(seat_ID))
+seat_ID = sorted(seat_ID)
+print(seat_ID[-1])
